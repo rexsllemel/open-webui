@@ -1,8 +1,8 @@
 #!/bin/bash
 
-image_name="open-webui"
-container_name="open-webui"
-host_port=3000
+image_name="iplast-webui"
+container_name="iplast-webui"
+host_port=3112
 container_port=8080
 
 docker build -t "$image_name" .
