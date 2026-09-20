@@ -63,6 +63,7 @@ from open_webui.config import (
     OAUTH_UPDATE_PICTURE_ON_LOGIN,
     OAUTH_USERNAME_CLAIM,
     WEBHOOK_URL,
+    WEBUI_NAME,
 )
 from open_webui.constants import ERROR_MESSAGES
 from open_webui.env import (
@@ -505,7 +506,7 @@ async def get_oauth_client_info_with_dynamic_client_registration(
             # LICENSE covers this Open WebUI OAuth client identifier.
             # Do not alter, remove, obscure, or replace it except as LICENSE permits:
             # https://docs.openwebui.com/license.
-            client_name='Open WebUI',
+            client_name=WEBUI_NAME,
             redirect_uris=[f'{redirect_base_url}/oauth/clients/{client_id}/callback'],
             grant_types=['authorization_code', 'refresh_token'],
             response_types=['code'],
